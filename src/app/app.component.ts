@@ -1,6 +1,5 @@
 import { Component } from "@angular/core";
 import { Router } from "@angular/router";
-import { and } from "@angular/router/esm2015/src/utils/collection";
 import { SwPush, SwUpdate } from "@angular/service-worker";
 
 @Component({
