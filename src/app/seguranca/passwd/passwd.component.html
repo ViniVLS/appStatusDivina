@@ -1,0 +1,54 @@
+
+<div class="container">
+  <form  >
+    <h1>Alteração de senha</h1>
+  <div class="ui-g ui-fluid">
+    <div class="ui-g-12">
+
+        <p-panel header="Altere sua senha" >
+      
+          <div class="ui-g ui-fluid">
+            
+            <div class="ui-g-12">
+
+            <input id="senha"  type="password"
+
+             pPassword promptLabel="Escolha sua nova senha"
+             placeholder="Escolha uma nova senha"
+             weakLabel ="Fraca"
+             mediumLabel ="Média"
+             strongLabel ="Forte"
+             name="senha"
+             ngModel required #senha
+             />
+             
+            </div>
+
+            <div class="ui-g-12">
+                        <input id="conf" type="password"
+                         pPassword promptLabel="Confirme a nova senha"
+            placeholder="Confirme a nova senha"
+            weakLabel ="Fraca"
+            mediumLabel ="Média"
+            strongLabel ="Forte"
+            name="conf"
+            ngModel required #conf
+            />
+
+          </div>
+
+
+          </div>
+          <button type="button"
+
+          pButton label="Alterar" (click)="alteraSenha(senha.value,conf.value)"></button>
+        </p-panel>
+
+
+
+    </div>
+
+  </div>
+</form>
+</div>
+

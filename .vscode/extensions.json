@@ -1,0 +1,13 @@
+{
+    "recommendations": [
+        "eamodio.gitlens",
+        "esbenp.prettier-vscode",
+        "shaneliesegang.vscode-simple-icons-rev",
+        "taldennis-unfoldai-chatgpt-copilot.unfoldai",
+        "wix.vscode-import-cost",
+        "ecmel.vscode-html-css",
+        "dbaeumer.vscode-eslint",
+        "wallabyjs.console-ninja",
+        "naumovs.color-highlight"
+    ]
+}

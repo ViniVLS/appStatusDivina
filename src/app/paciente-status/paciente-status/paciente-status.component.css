@@ -1,0 +1,1110 @@
+.navbar {
+  background-color: #60bd44;
+  border-bottom: 1px solid #42a324;
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
+  position: relative;
+  width: 0 auto;
+}
+
+.navbar img {
+  margin-left: 5em;
+}
+
+.navbar h1 {
+  font-size: 45px;
+  color: #ffffff;
+  display: flex;
+  padding-right: 1em;
+  padding-left: 2em;
+  margin: 0 auto;
+  white-space: nowrap;
+}
+
+.sair {
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+  margin-right: 5em;
+  margin-left: 0px;
+  margin-top: 0px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.sair:hover {
+  transform: scale(1.5);
+}
+
+.horaAtual {
+  text-align: center;
+  margin-top: 0.9em;
+  margin-bottom: 3em;
+  font-size: 17px;
+}
+
+.horaAtual span {
+  display: inline;
+  padding: 5px 10px;
+  background-color: #475155;
+  color: #ffffff;
+  border-radius: 20px;
+}
+
+.pacEsp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0em;
+  font-size: 30px;
+  margin-top: -2px;
+  margin-bottom: -4px;
+}
+
+.pacEsp span {
+  margin-left: 0.3em;
+}
+
+.pacEsp img {
+  margin-right: 0.2em;
+  width: 29px;
+  height: 30px;
+}
+
+.textoShare {
+  text-align: left;
+  font-size: 20px;
+  margin-left: 17em;
+  margin-right: 17em;
+  margin-top: 1.5em;
+  font-family: Arial, Helvetica, sans-serif;  
+}
+
+.share {
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 0.5em;
+ }
+
+ .share a {
+  color: #475155
+ }
+
+.share img {
+  width: 35px;
+  height: 35px;
+  vertical-align: middle;
+}
+
+
+
+.formInfoPaciente {
+  border: 1px solid #ccc;
+  padding: 0 auto;
+  padding-right: 0.5em;
+  padding-top: 0.5em;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 1.5em;
+  background-color: rgb(235, 235, 235);
+  border-radius: 20px;
+  height: 50%;
+  font-weight: normal;
+  overflow: hidden;
+}
+
+.formInfoPaciente h1 {
+  text-align: center;
+  font-size: 45px;
+  margin-top: 0.2em;
+  margin-bottom: 1px;
+}
+
+.formInfoPaciente p {
+  margin-left: 1em;
+  font-size: 25px;
+  word-wrap: break-word;
+  font-weight: bold;
+}
+
+.formInfoPaciente .dado {
+  font-weight: normal;
+  font-size: 22px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  word-wrap: break-word;
+}
+
+
+.formStatusPaciente {
+  border: 1px solid #ccc;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 0.5em;
+  background-color: rgb(235, 235, 235);
+  padding-right: 0.5em;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 0.8em;
+ }
+
+.titleStatus {
+  font-size: 25px;
+  padding-left: 1.2em;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+  display: block;
+  background-color: #475155;
+  color: #ffffff;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin: 0;
+  width: 105%;
+}
+
+.itemTimeLine {
+  color: #475155;
+  margin-top: 1.1em;
+  margin-bottom: 0.5em;
+  margin-left: 1.5em;
+  float: left;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  clear: both;
+  /* Adicione esta propriedade para quebrar a linha */
+  position: relative;
+  /* Adiciona position: relative para que o posicionamento absoluto funcione */
+}
+
+.dadosStatus {
+  color: #475155;
+  margin-top: 1.3em;
+  margin-left: 1em;
+  float: left;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+
+/*Inicio Da timeLine ACENDIDA*/
+.timeline-container {
+  position: relative;
+    z-index: 0;
+}
+
+ul.timeline {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;    
+    margin-left: 1.5em;
+    white-space: nowrap;
+    margin-top: 0.5em;
+}
+
+/*Texto*/
+ul.timeline p {
+  width: 200px;
+  padding: 15px;
+  margin-bottom: 10px;
+  padding-left: 2.5em;
+  background-color: transparent;
+  border-radius: 5px;
+  position: relative;
+  margin-left: 0.5em;
+  font-size: 20px;
+  color: #475155;
+}
+
+/*Circulo*/
+ul.timeline p::before {
+  content: '';
+  position: absolute;
+  top: 47%;
+  left: 6%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 3px solid #1697d7;
+  margin-top: -10px;
+  z-index: 0;
+ 
+}
+
+/*Linha*/
+ul.timeline p:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 78%;
+  left: 5.6%;
+  transform: translateX(-8%);
+  width: 3px;
+  height: calc(100% - 15%);
+  background-color: #475155;
+ 
+}
+/*Final Da timeLine ACENDIDA*/
+
+/*Inicio Da timeLine APAGADA*/
+ul.timeline p.timeline-item-faded {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #b8babb;
+ 
+}
+/*Circulo*/
+ul.timeline p.timeline-item-faded::before {
+  background-color: #ffffff;
+  border: 3px solid #adb7bc;
+}
+/*Linha*/
+ul.timeline p.timeline-item-faded:not(:last-child)::after {
+  background-color: #9ea2a4;
+}
+/*Final Da timeLine APAGADA*/
+
+
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #60bd44;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  margin-top: 1em;
+  border-top: 1px solid #42a324;
+  text-align: center;
+}
+
+.imgClassif2 {
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 90vw;
+  font-size: small;
+  background-size: contain;
+  min-width: 90%;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 0.5em;
+  margin-bottom: 0.1em;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.imgClassif2 img {
+  max-width: 100%;
+  height: 35px;
+  border-radius: 40px;
+}
+
+.imgClassif2 h1 {
+  margin-right: 5px;
+}
+
+.satisfacao {
+  text-align: center;
+  font-size: 2vw;
+  /* Usando vw para tornar o tamanho responsivo */
+  padding-top: 1.7em;
+  padding-bottom: 2em;
+  position: relative;
+  bottom: 0;
+  /* Posiciona no rodapé */
+  width: 100%;
+  /* Ocupa toda a largura */
+  margin-bottom: 1em;
+}
+
+.satisfacao a {
+  text-decoration: none;
+  color: #475155;
+  cursor: pointer;
+  font-family: "Arial Narrow Bold";
+}
+
+.vermelho {
+  background-color: #e30613;
+  padding: 5px;
+  border-radius: 6px;
+  color: black;
+}
+
+.laranja {
+  background-color: #f39200;
+  padding: 5px;
+  border-radius: 6px;
+  color: black;
+}
+
+.amarelo {
+  background-color: #fcea10;
+  padding: 5px;
+  border-radius: 6px;
+  color: black;
+}
+
+.verde {
+  background-color: #72bf44;
+  padding: 5px;
+  border-radius: 6px;
+  color: black;
+}
+
+.azul {
+  background-color: #009fe3;
+  padding: 5px;
+  border-radius: 6px;
+  color: black;
+}
+
+@media (max-width: 730px) and (max-height: 359px) {
+  .formStatusPaciente {
+    border: 1px solid #ccc;
+    margin-top: 0.1em;
+    width: 90%;
+    max-width: 1200px;
+    padding-left: -1em;
+    margin-top: 0.2em;
+    padding-bottom: 3em;
+    padding-top: 0.2em;
+    font-size: 18.5px;
+  }
+
+  .pacEsp {
+    font-size: 17px;
+    margin-bottom: 2px;
+  }
+
+  .pacEsp img {
+    margin-right: 0.2em;
+    height: 20px;
+  }
+
+  .formInfoPaciente {
+    padding: 0 auto;
+    padding-right: 0.5em;
+    padding-top: 1.5em;
+    margin: 0 auto;
+    margin-top: 0.5em;
+    height: 50%;
+    font-weight: normal;
+  }
+
+  .navbar .sair {
+    width: 25px;
+    height: 25px;
+    margin-right: 1em;
+    padding-right: 0em;
+  }
+
+  .navbar h1 {
+    font-size: 35px;
+    display: flex;
+    padding-right: 1em;
+
+    justify-content: center;
+  }
+}
+
+@media (max-width: 650px) {
+  .formInfoPaciente {
+    margin-bottom: 1em;
+    padding-top: 1.5em;
+    padding-bottom: 0.5em;
+    overflow: hidden;
+  }
+
+  .formInfoPaciente h1 {
+    font-size: 27px;
+    margin-top: -0.7em;
+  }
+
+  .pacEsp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    margin-top: -0.4em;
+    margin-bottom: -0.8em;
+  }
+
+  .pacEsp img {
+    margin-right: 0.2em;
+    width: 20px;
+    height: 19px;
+    margin-bottom: 3px;
+  }
+
+  .textoShare {
+    text-align: left;
+    font-size: 10px;
+    margin-left: 5em;
+    margin-right: 5em;
+    margin-top: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .share {
+    text-align: center;
+    font-size: small;
+  }
+
+  .share img {
+    width: 21px;
+    height: 21px;
+    vertical-align: middle;
+  }
+
+  .formInfoPaciente p {
+    font-size: 14px;
+  }
+
+  .formInfoPaciente .dado {
+    font-weight: normal;
+    font-size: 11.5px;
+  }
+
+  .formStatusPaciente {
+    margin-top: 0.8em;
+  }
+
+  .dadosStatus {
+    font-size: 11px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      padding-bottom: 1.5em;
+  }
+
+  .itemTimeLine {
+    font-size: 11px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+
+
+  /*Inicio Da timeLine*/
+  .timeline-container {
+    position: relative;
+    z-index: 0;
+    /* Defina a z-index para o grupo */
+  }
+
+/*Classe original acendida*/
+  ul.timeline {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    margin-left: 1.5em;
+    white-space: nowrap;
+    margin-top: 0.5em;
+  }
+
+  /*Classe original acendida*/
+  ul.timeline p {
+    width: 50px;
+    padding: 8px;
+    margin-bottom: 3px;
+    padding-left: 2em;
+    background-color: transparent;
+    border-radius: 5px;
+    position: relative;
+    margin-left: 0.5em;
+    font-size: 11px;
+    color: #475155;
+    
+
+  }
+
+  /*Circulo*/
+  ul.timeline p::before {
+    content: '';
+    position: absolute;
+    top: 55%;
+    /* Centraliza o círculo verticalmente */
+    left: 6%;
+    /* Ajuste a posição conforme necessário */
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    z-index: 0;
+    border: 2px solid #2c8dc9;
+    margin-top: -10px;
+    /* Ajuste para posicionar corretamente */
+  }
+
+  /*Linha*/
+  ul.timeline p:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 80%;
+    /* Centraliza a linha verticalmente = se aumentar % vai para baixo*/
+    left: 5%;
+    transform: translateX(-5%);
+    width: 2px;
+    height: calc(100% - 27%);
+    /* Ajusta a altura da linha vertical */
+    z-index: 0;
+    
+  }
+
+  /* Nova classe para o texto mais apagado */
+  ul.timeline p.faded-item {
+    width: 50px;
+    padding: 8px;
+    margin-bottom: 3px;
+    padding-left: 2em;
+    background-color: transparent;
+    border-radius: 5px;
+    position: relative;
+    margin-left: 0.5em;
+    font-size: 11px;
+    color: #b7b6b6;
+  }
+
+  /* Nova classe para o círculo mais apagado */
+  ul.timeline p.timeline-item-faded::before  {
+    background-color: #e0e0e0;
+    /* Cor mais apagada */
+    border-color: #ccc;
+    /* Borda mais apagada */
+  }
+
+  /* Nova classe para a linha mais apagada */
+  ul.timeline p.timeline-item-faded:not(:last-child)::after{
+    background-color: #e0e0e0;
+    /* Cor mais apagada */
+  }
+
+  /*Final Da timeLine*/
+
+
+  .horaAtual {
+    font-size: 12px;
+    margin-bottom: 3em;
+  }
+
+  .titleStatus {
+    font-size: 18px;
+  }
+
+  .navbar h1 {
+    font-size: 22px;
+    display: flex;
+    padding-right: 0px;
+    padding-left: 0px;
+    justify-content: left;
+    width: 230px;
+    white-space: nowrap;
+  }
+
+  .navbar .sair {
+    width: 26px;
+    height: 26px;
+    margin-right: 0.6em;
+    padding-right: 0em;
+  }
+
+  .footer p {
+    font-size: 9px;
+  }
+
+  .footer {
+    height: 37px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar img {
+    margin-left: 1em;
+    height: 50px;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+    display: flex;
+  }
+
+  .navbar {
+    background-color: #60bd44;
+    border-bottom: 1px solid #42a324;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1em;
+  }
+
+  .satisfacao {
+    text-align: center;
+    font-size: 2.7vw;
+    /* Usando vw para tornar o tamanho responsivo */
+    padding-top: 0.5em;
+    padding-bottom: 2em;
+    margin-top: 1em;
+    margin-bottom: 3em;
+    /* Ajuste conforme necessário */
+    position: relative;
+    /* Mudado de "bottom" para "fixed" */
+    bottom: 5px;
+    /* Posicionar no rodapé */
+    width: 100%;
+    /* Para ocupar toda a largura */    
+  }
+
+  .satisfacao a {
+    font-family: "Arial Narrow Bold";
+  }
+
+  .imgClassif2 {
+    width: 50%;
+    height: 18%;
+    font-size: 0.23em;
+    font-family: sans-serif;
+    margin-top: 0.5em;
+    white-space: nowrap;
+    margin-right: 0px;
+    margin-left: 0px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .imgClassif2 img {
+    width: 3.15%;
+    height: 17.5%;
+    padding-bottom: 2px;
+  }
+
+  .imgClassif2 h1 {
+    margin-right: 2px;
+  }
+}
+
+@media (min-width: 650px) and (max-width: 900px) {
+  .navbar {
+    background-color: #60bd44;
+    border-bottom: 1px solid #42a324;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1em;
+    position: relative;
+    padding-left: 10em;
+    width: 0 auto;
+  }
+
+  .navbar .sair {
+    margin-right: 15em;
+  }
+
+  .navbar .img {
+    margin-left: 1em;
+  }
+
+  .navbar h1 {
+    font-size: 30px;
+    margin-left: 2em;
+  }
+
+  .imgClassif2 {
+    width: 90%;
+    font-size: 6.5px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .imgClassif2 img {
+    width: 3.5%;
+    height: 30.5%;
+  }
+
+  .formInfoPaciente .dado {
+    font-size: 21px;
+  }
+
+  .satisfacao {
+    text-align: center;
+    font-size: 2.5vw;
+    /* Usando vw para tornar o tamanho responsivo */
+    padding-top: 2em;
+    padding-bottom: 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    /* Ajuste conforme necessário */
+    position: relative;
+    /* Mudado de "bottom" para "fixed" */
+    bottom: 5px;
+    /* Posicionar no rodapé */
+    width: 100%;
+    /* Para ocupar toda a largura */
+  }
+
+  .satisfacao a {
+    font-family: "Arial Narrow Bold";
+  }
+
+  .pacEsp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    margin-top: -0.4em;
+    margin-bottom: -0.7em;
+  }
+
+  .pacEsp img {
+    margin-right: 0.2em;
+    height: 21px;
+    width: 20px;
+    margin-bottom: 4px;
+  }
+
+  .textoShare {
+    text-align: left;
+    font-size: 13px;
+    margin-left: 4em;
+    margin-right: 4em;
+    margin-top: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .share {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .formStatusPaciente {
+    margin-top: 0em;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1150px) {
+  .imgClassif2 {
+    width: 90%;
+    font-size: 10px;
+    white-space: nowrap;
+  }
+
+  .imgClassif2 img {
+    width: 4%;
+  }
+
+  .formStatusPaciente {
+    margin-top: 0.1em;
+  }
+
+  .textoShare {
+    text-align: left;
+    font-size: 15.5px;
+    margin-left: 3.5em;
+    margin-right: 3.5em;
+    margin-top: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .share {
+    margin-top: 3px;
+    text-align: center;
+    font-size: 17px;
+  }
+
+  .satisfacao {
+    text-align: center;
+    font-size: 2.5vw;
+    /* Usando vw para tornar o tamanho responsivo */
+    padding-top: 2em;
+    padding-bottom: 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    /* Ajuste conforme necessário */
+    position: relative;
+    /* Mudado de "bottom" para "fixed" */
+    bottom: 5px;
+    /* Posicionar no rodapé */
+    width: 100%;
+    /* Para ocupar toda a largura */
+  }
+}
+
+@media (max-width: 327px) {
+  .formInfoPaciente {
+    margin-bottom: 1em;
+    padding-top: 0.5em;
+  }
+
+  .formInfoPaciente h1 {
+    font-size: 18px;
+    margin-top: 1px;
+  }
+
+  .formInfoPaciente p {
+    font-size: 10px;
+  }
+
+  .formInfoPaciente .dado {
+    font-weight: normal;
+    font-size: 10px;
+  }
+
+  .pacEsp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: -1.4em;
+    margin-top: -0.9em;
+  }
+
+  .pacEsp img {
+    margin-right: 0.2em;
+    height: 15px;
+    width: 14px;
+  }
+
+  .formStatusPaciente {
+    margin-top: 0.3em;
+  }
+
+  .dadosStatus {
+    font-size: 8px;
+  }
+
+  .itemTimeLine {
+    font-size: 8px;
+  }
+
+
+  /*Inicio Da timeLine*/
+
+  .timeline-container {
+    position: relative;
+    z-index: 0;
+    /* Defina a z-index para o grupo */
+  }
+
+  /*Classe original acendida*/
+  ul.timeline {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color: #475155;
+    margin-left: 0.5em;
+    white-space: nowrap;
+    margin-top: 0.5em;
+
+  }
+
+  /*Classe original acendida*/
+  ul.timeline p {
+    width: 50px;
+    padding: 10px;
+    margin-bottom: 4px;
+    padding-left: 2em;
+    background-color: transparent;
+    border-radius: 5px;
+    position: relative;
+    margin-left: 0.5em;
+    font-size: 9px;
+
+  }
+
+  /*Classe original acendida*/
+  ul.timeline p::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    /* Centraliza o círculo verticalmente */
+    left: 6%;
+    /* Ajuste a posição conforme necessário */
+    transform: translateX(-50%);
+    width: 9px;
+    height: 9px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    z-index: 0;
+    border: 2px solid #2c8dc9;
+    margin-top: -10px;
+    /* Ajuste para posicionar corretamente */
+  }
+
+  /*Classe original acendida*/
+  ul.timeline p:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 63%;
+    /* Centraliza a linha verticalmente = se aumentar % vai para baixo*/
+    left: 4%;
+    transform: translateX(-5%);
+    width: 2px;
+    height: calc(100% - 20%);
+    /* Ajusta a altura da linha vertical */
+    z-index: 0;
+  }
+
+
+  /* Nova classe para o texto mais apagado */
+  ul.timeline p.faded-item {
+    width: 50px;
+    padding: 10px;
+    margin-bottom: 4px;
+    padding-left: 2em;
+    background-color: transparent;
+    border-radius: 5px;
+    position: relative;
+    margin-left: 0.5em;
+    font-size: 9px;
+    color: #b7b6b6;
+  }
+
+  /* Nova classe para o círculo mais apagado */
+  ul.timeline p.faded-item::before {
+    background-color: #e0e0e0;
+    /* Cor mais apagada */
+    border-color: #ccc;
+    /* Borda mais apagada */
+  }
+
+  /* Nova classe para a linha mais apagada */
+  ul.timeline p.faded-item::after {
+    background-color: #e0e0e0;
+    /* Cor mais apagada */
+  }
+
+  /*Final Da timeLine*/
+
+
+
+
+  .horaAtual {
+    font-size: 9px;
+    margin-bottom: 3em;
+  }
+
+  .titleStatus {
+    font-size: 16px;
+  }
+
+  .navbar h1 {
+    font-size: 17px;
+    display: flex;
+    padding-right: 0px;
+    padding-left: 0.5em;
+    justify-content: left;
+    width: 230px;
+  }
+
+  .navbar .sair {
+    width: 22px;
+    height: 22px;
+    margin-right: 1em;
+    padding-right: 0em;
+  }
+
+  .navbar img {
+    margin-left: 1em;
+    height: 40px;
+    margin-right: none;
+    margin-left: 1.5em;
+    display: flex;
+  }
+
+  .navbar {
+    display: flex;
+  }
+
+  .footer p {
+    font-size: 9px;
+  }
+
+  .footer {
+    height: 37px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+  }
+
+  .imgClassif2 {
+    width: 40%;
+    height: 15%;
+    font-size: 3px;
+    font-family: sans-serif;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding-bottom: 3px;
+    white-space: nowrap;
+  }
+
+  .imgClassif2 img {
+    width: 2%;
+    height: 13%;
+    padding-top: 3.5px;
+  }
+
+  .satisfacao {
+    text-align: center;
+    font-size: 2.4vw;
+    /* Usando vw para tornar o tamanho responsivo */
+    padding-bottom: 2em;
+    margin-top: 0.2em;
+    margin-bottom: 2em;
+    /* Ajuste conforme necessário */
+    position: relative;
+    /* Mudado de "bottom" para "fixed" */
+    bottom: 5px;
+    /* Posicionar no rodapé */
+    width: 100%;
+    /* Para ocupar toda a largura */
+  }
+}
+
+@media (min-width: 1150px) and (max-width: 1500px) {
+  .textoShare {
+    text-align: left;
+    font-size: 20px;
+    margin-left: 4em;
+    margin-right: 4em;
+    margin-top: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .share {
+    margin-top: 3px;
+    text-align: center;
+    font-size: 20px;
+  }
+}

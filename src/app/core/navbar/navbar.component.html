@@ -1,0 +1,138 @@
+
+<nav class="navbar">
+
+
+    <div>
+      <div class="ui-g">
+        <div class="ui-g-12">
+          <a href="javascript:;" class="navbar-toggle" (click)="exibindoMenu = !exibindoMenu">
+            <i class="fa fa-bars"></i></a>
+            <a href="javascript:;" class="sair" (click)="sair()">
+              <i class="fa fa-sign-out fa-2x"></i></a>
+
+
+           </div>
+
+      </div>
+    </div>
+
+    <ul class="navbar-menu" [hidden]="!exibindoMenu">
+        <div class="logo">
+          <img src="assets/img/logox.png" alt="teste" width="280">
+
+        </div>
+        <div class="ui-g">
+          <img class="avatar" src="assets/img/avatar-5.png" alt="teste" width="80">
+
+
+        </div>
+
+        <li class="navbar-usuario">
+          <a routerLink="/passwd">{{ auth.jwtPayload?.nome }}</a>
+          <i class="fa fa-cog fa sett "></i>
+        </li>
+
+       <div class="linha">
+          <li *ngIf="temPermissao('ROLE_CCLINICO')"   (click)="cclinico()"  class="navbar-menuitem"  routerLinkActive="ativo" >
+              <i class="fa fa-medkit fa-2x i"></i>
+              <a routerLink="/cclinico">Centro Clínico</a>
+              <div   class="spa"><span>Centro Clínico</span></div></li>
+            
+              <li *ngIf="temPermissao('ROLE_CDIX')"   (click)="cdiex()"  class="navbar-menuitem"  routerLinkActive="ativo" >
+                <i class="fa fa-heartbeat fa-2x i"></i>
+                <a routerLink="/cdi">Exames</a>
+                <div   class="spa"><span>Acesso a imagens e laudos</span></div></li>
+
+          <li *ngIf="temPermissao('ROLE_FLASH')"   (click)="flash()"  class="navbar-menuitem"  routerLinkActive="ativo" >
+              <i class="fa fa-bolt fa-2x i"></i>
+              <a routerLink="/flash">Flash</a>
+              <div   class="spa"><span>Indicador flash</span></div></li>
+
+              <li  *ngIf="temPermissao('ROLE_OC')" (click)="ocupacao()"  class="navbar-menuitem"  routerLinkActive="ativo" >
+                  <i class="fa fa-bed fa-2x i"></i>
+                  <a routerLink="/ocupacao">Ocupação</a>
+                  <div   class="spa"><span>Ocupação hospitalar</span></div></li>
+
+                  <li  *ngIf="temPermissao('ROLE_OC')" (click)="agendac()"  class="navbar-menuitem"  routerLinkActive="ativo" >
+                    <i class="fa fa-list fa-2x i"></i>
+                    <a routerLink="/agendac">Agenda cirúrgica</a>
+                    <div   class="spa"><span>Painel de agendamento</span></div></li>
+
+              <li  *ngIf="temPermissao('ROLE_PA')" (click)="ocpa()"  class="navbar-menuitem"  routerLinkActive="ativo" >
+                <i class="fa fa-ambulance fa-2x i"></i>
+                <a routerLink="/ocpa">Emergência</a>
+                <div   class="spa"><span>Painel emergência</span></div></li>
+                <li  *ngIf="temPermissao('ROLE_PAHE')" (click)="ocpahe()"  class="navbar-menuitem"  routerLinkActive="ativo" >
+                  <i class="fa fa-ambulance fa-2x i"></i>
+                  <a routerLink="/pahe">Emergência</a>
+                  <div   class="spa"><span>Pacientes emergência</span></div></li>
+
+                
+              <li  *ngIf="temPermissao('ROLE_CONSULTA')" (click)="prot()"  class="navbar-menuitem"  routerLinkActive="ativo" >
+                <i class="fa fa-file-text-o fa-2x i"></i>
+                <a routerLink="/pacprot">Protocolos</a>
+                <div   class="spa"><span>Pacientes em protocolos institucionais</span></div></li>
+
+                   
+              <li  *ngIf="temPermissao('ROLE_ENF')" (click)="prot()"  class="navbar-menuitem"  routerLinkActive="ativo" >
+                <i class="fa fa-file-text-o fa-2x i"></i>
+                <a routerLink="/pacprot">Protocolos</a>
+                <div   class="spa"><span>Pacientes em protocolos institucionais</span></div></li>
+
+
+          <li  *ngIf="temPermissao('ROLE_CONSULTA')" (click)="teste()"  class="navbar-menuitem"  routerLinkActive="ativo" >
+              <i class="fa fa-calendar fa-2x i"></i>
+              <a routerLink="/agenda">Agenda</a>
+              <div   class="spa"><span>Sua agenda de serviços</span></div></li></div>
+
+
+        <li  *ngIf="temPermissao('ROLE_CONSULTA')" (click)="teste2()"  class="navbar-menuitem"  routerLinkActive="ativo">
+          <i class="fa fa-stethoscope  fa-2x i"></i>
+          <a routerLink="/paciente">Pacientes</a>
+          <div   class="spa"><span>Seus pacientes internados</span>
+          </div>
+        </li>
+          <li  *ngIf="grupo" (click)="teste3()" class="navbar-menuitem" routerLinkActive="ativo" >
+            <i class="fa fa-users  fa-2x i"></i>
+            <a routerLink="/grupopaciente">{{ auth.jwtPayload?.ds_grupo}}</a>
+            <div   class="spa"><span>Pacientes internados para equipe</span>
+            </div>
+          </li>
+          <li  *ngIf="temPermissao('ROLE_CONSULTA')"(click)="teste7()" class="navbar-menuitem" routerLinkActive="ativo" >
+              <i class="fa fa-users  fa-2x i"></i>
+              <a routerLink="/coremanejo">Co-manejo</a>
+              <div   class="spa"><span>Pacientes Co-manejo</span>
+              </div>
+            </li>
+            <li  *ngIf="temPermissao('ROLE_CONSULTA')" (click)="teste8()" class="navbar-menuitem" routerLinkActive="ativo" >
+                <i class="fa fa-exclamation fa-2x i"></i>
+                <a routerLink="/aval">Solicitações</a>
+                <div   class="spa"><span>Suas solicitações recebidas</span>
+                </div>
+              </li>
+
+          <li *ngIf="temPermissao('ROLE_CONSULTA')"  (click)="teste4()" class="navbar-menuitem"  routerLinkActive="ativo">
+              <i class="fa fa-dollar  fa-2x i"></i>
+              <a routerLink="/repasse">Repasse</a>
+              <div   class="spa"><span>Seus repasses gerados</span>
+              </div>
+          </li>
+
+              <li *ngIf="temPermissao('ROLE_CONSULTA')"  (click)="teste5()" class="navbar-menuitem"  routerLinkActive="ativo">
+                <i class="fa fa-comments-o fa-2x i"></i>
+                <a routerLink="/faleconosco">Fale conosco</a>
+                <div   class="spa"><span>Fale com a direção</span>
+                </div>
+              </li>
+              <li  *ngIf="temPermissao('ROLE_CRM')"  (click)="teste6()" class="navbar-menuitem"  routerLinkActive="ativo">
+                <i class="fa fa-comments-o fa-2x i"></i>
+                <a routerLink="/crm">Comunicação</a>
+                <div   class="spa"><span>Direção responde</span>
+                </div>
+              </li>
+
+
+
+    </ul>
+
+  </nav>

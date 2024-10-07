@@ -1,0 +1,187 @@
+.navbar {
+
+    top: 0;
+    background-color: #1e94d2;
+    position: fixed;
+    padding: 5px;
+    width:100%;
+
+    z-index: 9998;
+
+
+
+
+
+    }
+    .navbar-toggle{
+        color: white;
+    }
+    .navbar-menu{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 255;
+        margin: 0;
+        padding: 0;
+        z-index: 9998;
+        overflow-y: scroll;
+
+
+        border: 1px solid #D5D5D5;
+        background: #ffffff;
+        color: #222222;
+
+        list-style: none;
+    }
+    .navbar-usuario{
+    margin-bottom: 15px;
+
+    padding: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-top: 100px;
+      margin-left: 10px;
+    border: none;
+    background: #ffffff;
+    color: #222222;
+
+    }
+    .navbar-menuitem{
+    padding: 15px;
+    border-bottom: 1px solid rgb(243, 240, 240);
+
+    }
+
+    .navbar-menuitem a{
+        color: #575654;
+        font: bold;
+        text-decoration: none;
+
+
+
+
+    }
+
+    .navbar-menuitem i{
+        color: #1a9cdd;
+        padding-right: 10px;
+
+    }
+
+    .navbar-menuitem a:hover{
+        color: rgb(26, 139, 238);
+
+
+
+
+    }
+    .navbar-menu li:hover{
+         background-color:  rgb(245, 245, 250);
+    }
+
+
+    .navbar-menuitem.ativo {
+      background-color: #EEF2F6;
+      color: #fff;
+      cursor: pointer;
+    }
+
+      .spa{
+          padding-left: 40px;
+
+
+      }
+      span{
+        font-size: 12px;
+
+        color: #22222271;
+      }
+
+
+    .logo{
+
+        border-bottom: 1px solid rgb(250, 247, 247);
+        background: #ffffff;
+        color: #222222;
+        padding-bottom: 5px;
+
+    }
+    .avatar{
+        margin: auto;
+        position: absolute;
+         left: 0;  right: 0;
+         padding-top: 10px;
+
+    }
+    .sett{
+      color: #1a9cdd;
+      margin-left:  5px;
+
+
+
+      }
+    li a{
+        margin-left: 40px;
+
+    }
+    .navbar-usuario a{
+      margin-left: 5px;
+      color: #222222;
+    }
+    li :hover{
+        cursor: pointer;
+    }
+    .i{
+      position:absolute;
+    }
+
+    @media (min-width: 100px){
+    .vlt{
+
+           color: white;
+           z-index: 9998;
+           margin-left: 80%;
+           top: 0;
+           padding: 5px;
+           position: relative;
+          z-index: 9980;
+    }
+
+  }@media (min-width: 1200px){
+    .vlt{
+
+      color: white;
+      z-index: 9998;
+      margin-left: 95%;
+      top: 0;
+      padding: 5px;
+      position: relative;
+     z-index: 9980;
+}
+  }
+
+  .risco{
+
+    background-color: #d9534f;
+    color: aliceblue ;
+
+}
+.sair {
+  margin-top: -5px;
+  margin-right: 10px;
+  float: right;
+  color: #fff;
+}
+.sairx {
+
+  float: right;
+  color: #fff;
+  padding-top: 30px;
+  margin-right: -30px;
+  font-size: 13px;
+
+
+
+}
+

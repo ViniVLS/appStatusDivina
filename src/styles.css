@@ -1,0 +1,33 @@
+
+body {
+
+  color: #475155;
+  margin: 0;
+
+}
+
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+    margin: 0 auto;
+    overflow: auto;
+    background-color: #ffffff;
+  }
+}
+
+@media (min-width: 100px) {
+  .container {
+    overflow: auto;
+    margin-top: 2em;
+  }
+}
+
+
+
+
+
+
+
+
+

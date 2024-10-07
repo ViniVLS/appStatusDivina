@@ -1,0 +1,124 @@
+.teste {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("/assets/img/fundox2.png");
+  max-width: 850px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 0 auto;/*Esse retirado e max-width 100% deixa o fundo png completo na página*/
+}
+
+.login-form {
+  border-radius: 4px;
+  padding: 20px;
+  background-color: transparent;
+  max-width: 400px;
+  flex: 1;
+}
+
+.login-form h1 {
+  text-align: center;
+  color: white;
+  font-size: 40px;
+}
+
+
+
+.campos {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color:rgb(231, 237, 238);
+}
+
+.campos span {
+  margin: 0 10px;
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+}
+
+.campos input[type="text"] {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  border-radius: 2px;
+  font-size: 22px;
+}
+
+.campos input[type="text"]:focus {
+  outline: none;
+  border: 0.5px solid rgb(16, 223, 238);
+  box-shadow: 0 0 5px rgb(12, 133, 163);
+}
+
+.campos input[type="text"]::placeholder {
+  font-size: 19px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #2197f8;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+@media (min-width: 980px) {
+  .teste {
+    min-height: 100vh;
+    background-color: #ccc;
+    background-image: url("assets/img/fundox2.jpg");
+    background-size: 100% 100%;
+  }
+}
+
+@media (min-width: 100px) {
+  .teste {
+    min-height: 100vh;
+    background-color: #ccc;
+    background-image: url("assets/img/fundo2.jpg");
+    background-size: 100% 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .login-form {
+    max-width: 250px;
+  }
+
+  .login-form h1 {
+    font-size: 21px;
+  }
+
+  .campos input[type="text"]::placeholder {
+    font-size: 16px;
+  }
+
+  button {
+    width: 100%;
+    padding: 7px;
+    background-color: #2197f8;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 15px;
+  }
+
+  .campos input[type="text"] {
+    flex: 1;
+    border: none;
+    padding: 7px;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+  }
+}

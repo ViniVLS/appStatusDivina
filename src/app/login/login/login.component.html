@@ -1,0 +1,30 @@
+
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+
+</head>
+<form #loginForm="ngForm" autocomplete="on" (ngSubmit)="login(loginForm)">
+  <div class="teste">
+    <div class="login-form">
+      <div>
+        <h1>Trajeto do Paciente</h1>
+      </div>
+
+      <div>
+        <div class="campos">
+          <span>
+            <i class="fa fa-user-md"></i>
+          </span>
+          <input name="codigo" maxlength="15" type="text" placeholder="Código do paciente" [(ngModel)]="codigo"  />
+        </div>
+      </div>
+
+      <div>
+        <button type="submit">Entrar</button>
+      </div>
+    </div>
+  </div>
+</form>
+
