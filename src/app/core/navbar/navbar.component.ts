@@ -3,7 +3,6 @@ import { AuthService } from './../../seguranca/auth.service';
 import { Router } from '@angular/router';
 import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 import { LogoutService } from '../../seguranca/logout.service';
-import { isNull } from 'util';
 import { MessageService } from "primeng/api";
 
 @Component({
