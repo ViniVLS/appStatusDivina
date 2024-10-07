@@ -9,14 +9,14 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 import { CurrencyMaskModule } from 'ng2-currency-mask';
 import { CheckboxModule } from 'primeng/checkbox';
 import { ButtonModule } from 'primeng/button';
-import { CaptchaModule } from 'primeng/Captcha';
+import { CaptchaModule } from 'primeng/captcha';
 import { MessageService } from 'primeng/api';
-import { TableModule } from 'primeng/Table';
-import { DialogModule } from 'primeng/Dialog';
+import { TableModule } from 'primeng/table';
+import { DialogModule } from 'primeng/dialog';
 import { EditorModule } from 'primeng/editor';
-import { InputTextModule } from 'primeng/inputText';
+import { InputTextModule } from 'primeng/inputtext';
 import { PanelModule } from 'primeng/panel';
-import { ProgressSpinnerModule } from 'primeng/ProgressSpinner';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { TooltipModule } from 'primeng/tooltip';
 import { DataViewModule } from 'primeng/dataview';
@@ -40,7 +40,6 @@ import { JwtModule } from '@auth0/angular-jwt';
 export function tokenGetter() {
   return localStorage.getItem('access_token');
 }
-
 
 @NgModule({
   declarations: [
@@ -71,26 +70,17 @@ export function tokenGetter() {
     SelectButtonModule,
     TooltipModule,
     CheckboxModule,
-    DataViewModule,
-    SelectButtonModule,
-    FormsModule,
     ProgressSpinnerModule,
-    TableModule,
-    TooltipModule,
     CommonModule,
-    ServiceWorkerModule.register("ngsw-worker.js", {
+    ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
     }),
-
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,
-        
       },
     }),
   ],
-  // tslint:disable-next-line:max-line-length
-
   providers: [
     { provide: LocationStrategy, useClass: HashLocationStrategy },
     { provide: HTTP_INTERCEPTORS, useClass: JwtHttpInterceptor, multi: true },
@@ -104,12 +94,11 @@ export function tokenGetter() {
   bootstrap: [AppComponent],
 })
 export class AppModule {
-  VAPID_PUBLIC_KEY =
-    "BNmSUbe4i_ac86Z8BpXsgZbCIBPODKrAxaEFF4NzHVOg2yFbSzYZAsWibf9ckBXT_69VkOi2BvWNcQnjz7VzRzU";
+  VAPID_PUBLIC_KEY = 'BNmSUbe4i_ac86Z8BpXsgZbCIBPODKrAxaEFF4NzHVOg2yFbSzYZAsWibf9ckBXT_69VkOi2BvWNcQnjz7VzRzU';
 
   constructor(private pushSw: SwPush, private update: SwUpdate) {
-    update.available.subscribe((update) => {
-      console.log("Nova versão disponível");
+    update.available.subscribe(() => {
+      console.log('Nova versão disponível');
     });
 
     this.SubscribeToPush();
@@ -126,8 +115,6 @@ export class AppModule {
       .then((pushSubscription) => {
         console.log(JSON.stringify(pushSubscription));
       })
-
-      .catch(err=> console.log("Ocorreu um erro:" + err)
-      );
+      .catch((err) => console.log('Ocorreu um erro:' + err));
   }
 }

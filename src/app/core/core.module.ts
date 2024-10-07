@@ -3,15 +3,15 @@ import { RouterModule } from '@angular/router';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import {InputTextModule} from 'primeng/inputText';
+import {InputTextModule} from 'primeng/inputtext';
 
 
 import { SidebarModule } from 'primeng/sidebar';
 
 
-import { OverlayPanelModule } from 'primeng/OverlayPanel';
-import { DialogModule } from 'primeng/Dialog';
-import { ProgressSpinnerModule } from 'primeng/ProgressSpinner';
+import { OverlayPanelModule } from 'primeng/overlaypanel';
+import { DialogModule } from 'primeng/dialog';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { HdpHttp } from './../seguranca/hdp-http';
 
 import { JwtHelperService } from '@auth0/angular-jwt';

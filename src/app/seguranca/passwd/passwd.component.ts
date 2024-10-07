@@ -1,4 +1,4 @@
-import { PasswdService } from './../passwd.service';
+import { PasswdService } from '../passwd.service';
 
 import { Component, OnInit } from '@angular/core';
 import { MessageService } from 'primeng/api';
