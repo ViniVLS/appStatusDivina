@@ -96,14 +96,21 @@ export class AppModule {
   VAPID_PUBLIC_KEY = 'BNmSUbe4i_ac86Z8BpXsgZbCIBPODKrAxaEFF4NzHVOg2yFbSzYZAsWibf9ckBXT_69VkOi2BvWNcQnjz7VzRzU';
 
   constructor(private pushSw: SwPush, private update: SwUpdate) {
-    update.available.subscribe(() => {
-      console.log('Nova versão disponível');
-    });
+    this.checkForUpdates();
+  }
 
-    this.SubscribeToPush();
-    pushSw.messages.subscribe((msg) => {
-      console.log(JSON.stringify(msg));
-    });
+  checkForUpdates() {
+    if (this.update.isEnabled) {
+      this.update.checkForUpdate().then(isUpdateAvailable => {
+        if (isUpdateAvailable) {
+          console.log("Service Worker: Nova versão disponível");
+       
+          this.update.activateUpdate().then(() => document.location.reload());
+        }
+      }).catch(err => {
+        console.error("Erro ao verificar atualizações: ", err);
+      });
+    }
   }
 
   SubscribeToPush() {
