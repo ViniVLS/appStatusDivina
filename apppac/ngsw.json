@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1728391038964,
+  "timestamp": 1728398765458,
   "index": "./index.html",
   "assetGroups": [
     {
@@ -13,12 +13,12 @@
       "urls": [
         "./favicon.ico",
         "./index.html",
-        "./main.b30f85cd5d98caba.js",
+        "./main.6bd1fa337aa9beb3.js",
         "./manifest.webmanifest",
-        "./polyfills.fd0172d532cc47f1.js",
+        "./polyfills.e86e320be3b4cfe2.js",
         "./runtime.a192fbc1c1f51f72.js",
-        "./scripts.68cdd7a933336fe8.js",
-        "./styles.c95c2e74c53e9a79.css"
+        "./scripts.3505d24a316c12fe.js",
+        "./styles.712999bf837a6f3b.css"
       ],
       "patterns": []
     },
@@ -4348,18 +4348,18 @@
     "./fundo2.30d455916378ae46.jpg": "7c17954224543ac79aee683e03df01afb4be4774",
     "./fundox2.0dd5998841fe9425.jpg": "7e439026699cf2455f87d303627bd21269742153",
     "./hue.8b1818380241e6ac.png": "f81ae627637a684614aa726e206c73ce099a01fd",
-    "./index.html": "2c6f3c7849cdfccb46c3954af1fe178613b221c5",
-    "./main.b30f85cd5d98caba.js": "136eaf8eebdb2d85c9d92bc57f3ceac76caeed39",
+    "./index.html": "37f4410f4a0ed633c41d1e7685e59f583f3ed220",
+    "./main.6bd1fa337aa9beb3.js": "550deb5bbb943ce222cf015aef4d8949a491fafa",
     "./manifest.webmanifest": "e926810cd123aac9369812f88ad78e9b32f1ede1",
-    "./polyfills.fd0172d532cc47f1.js": "d621004781c3c0c15ba46f1ab735067a8069ac3e",
+    "./polyfills.e86e320be3b4cfe2.js": "918c041bb228a3c1d58e29b8f413193df4031ac5",
     "./primeicons.0112589c5695a9ed.ttf": "ceeb46d594fde5cc507cdf8b70e38e78fe47653c",
     "./primeicons.943ab24c43224d29.svg": "d3332a45242b8f6edbf3f3c7176a280e7edcd961",
     "./primeicons.ba3f916dfb64be8c.woff2": "55a4b2a5f02e362405d8d874903af0b5f6a6c15d",
     "./primeicons.f8b9e8a4e401b603.woff": "b1648b50be13350fde8b5d9a6fe78354ddcc43e4",
     "./primeicons.ffecb2549ad1765a.eot": "e4df2355c405cd38aada36eda9015a810feab94c",
     "./runtime.a192fbc1c1f51f72.js": "fbbb063741edb56f7a50bca55fd5f223d30c0149",
-    "./scripts.68cdd7a933336fe8.js": "3d31466e1a230ac34958b5131ee0041aa19848bc",
-    "./styles.c95c2e74c53e9a79.css": "e986664f6947d8c115f78b1281983ee293c72d1a"
+    "./scripts.3505d24a316c12fe.js": "b6acbb0dfdae66c582021269959770745300c2b6",
+    "./styles.712999bf837a6f3b.css": "4262105b0fb800e0288194890b6baa380289bc0c"
   },
   "navigationUrls": [
     {

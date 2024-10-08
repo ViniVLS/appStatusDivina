@@ -19,10 +19,10 @@ export class LogoutService {
           this.auth.limparAccessToken();
           localStorage.removeItem("token");
           this.limparCache();
-          console.log("Logout service Limpou");
+          //console.log("Logout service Limpou");
         }),
         catchError((error) => {
-          console.error('Erro ao realizar logout:', error);
+          //console.error('Erro ao realizar logout:', error);
           return throwError(error); // Propaga o erro para o consumidor
         })
       );
