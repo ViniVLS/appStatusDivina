@@ -1,6 +1,6 @@
 import { AuthService } from "./../../seguranca/auth.service";
 import { Router, ActivatedRoute } from "@angular/router";
-import { NgForm } from "@angular/forms/forms";
+import { NgForm } from "@angular/forms";
 import { Component, OnInit, HostListener } from "@angular/core";
 import { MessageService } from "primeng/api";
 
