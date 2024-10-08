@@ -9,7 +9,6 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 import { CurrencyMaskModule } from 'ng2-currency-mask';
 import { CheckboxModule } from 'primeng/checkbox';
 import { ButtonModule } from 'primeng/button';
-import { CaptchaModule } from 'primeng/captcha';
 import { MessageService } from 'primeng/api';
 import { TableModule } from 'primeng/table';
 import { DialogModule } from 'primeng/dialog';
@@ -36,6 +35,7 @@ import { LogoutService } from './seguranca/logout.service';
 import { PasswdService } from './seguranca/passwd.service';
 import { SegurancaModule } from './seguranca/seguranca.module';
 import { JwtModule } from '@auth0/angular-jwt';
+
 
 export function tokenGetter() {
   return localStorage.getItem('access_token');
@@ -64,8 +64,7 @@ export function tokenGetter() {
     AppRoutingModule,
     PanelModule,
     DialogModule,
-    CurrencyMaskModule,
-    CaptchaModule,
+    CurrencyMaskModule, 
     EditorModule,
     SelectButtonModule,
     TooltipModule,

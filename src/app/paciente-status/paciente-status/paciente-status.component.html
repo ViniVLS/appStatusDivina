@@ -4,8 +4,9 @@
 <nav class="navbar">
   <img src="assets/img/logoNovoDivinaSemFundoBranca.jpg" alt="Logo" height="80px" />
   <h1>Trajeto do Paciente</h1>
-  <img (click)="sair()" class="sair" src="assets/img/sair.jpg" />
+  <img (click)="sair()" class="sair" src="assets/img/sair.jpg" pTooltip="Sair" tooltipPosition="top" />
 </nav>
+
 
 <p class="pacEsp">
   <img src="assets/img/persons.jpg" />
@@ -26,7 +27,7 @@
 </div>
 
 <div class="share">
-  <a (click)="compartilharViaWhatsApp()" target="_blank">
+  <a (click)="compartilharViaWhatsApp()" target="_blank" pTooltip="Compartilhar" tooltipPosition="top">
     <img src="assets/img/whats.jpg">
     <strong>
       Compartilhe seu trajeto
