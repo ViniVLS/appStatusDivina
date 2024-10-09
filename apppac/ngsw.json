@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1728413822582,
+  "timestamp": 1728473554129,
   "index": "./index.html",
   "assetGroups": [
     {
@@ -11,14 +11,15 @@
         "ignoreVary": true
       },
       "urls": [
+        "./55.c6f14065509de07c.js",
         "./favicon.ico",
         "./index.html",
-        "./main.eef52b209658071a.js",
+        "./main.6b563b8e7db73abc.js",
         "./manifest.webmanifest",
-        "./polyfills.495ca4a6f8947ca1.js",
-        "./runtime.72c9fa9ce45196bb.js",
-        "./scripts.cf89aba20fd7084e.js",
-        "./styles.4b7e499fa7cdfed0.css"
+        "./polyfills.e39215639f96cbe7.js",
+        "./runtime.27b74956bbb8a4a2.js",
+        "./scripts.a9665e37e3478df3.js",
+        "./styles.74a0b0c4bab2574c.css"
       ],
       "patterns": []
     },
@@ -2179,10 +2180,10 @@
         "./assets/img/sair.jpg",
         "./assets/img/whats.jpg",
         "./assets/img/yellowCicle.png",
-        "./color.dae87a04d07ca92b.png",
+        "./color.febf5f041e83bfbe.png",
         "./fundo2.30d455916378ae46.jpg",
         "./fundox2.0dd5998841fe9425.jpg",
-        "./hue.8b1818380241e6ac.png",
+        "./hue.de26927932756490.png",
         "./primeicons.0112589c5695a9ed.ttf",
         "./primeicons.943ab24c43224d29.svg",
         "./primeicons.ba3f916dfb64be8c.woff2",
@@ -2194,6 +2195,7 @@
   ],
   "dataGroups": [],
   "hashTable": {
+    "./55.c6f14065509de07c.js": "aefe7693a929b2a0b074f1d6e2f516e90060a946",
     "./assets/fontawesome/LICENSE.txt": "fab4eeaa4e16e663e4654a58d7d8ac77a91d9a79",
     "./assets/fontawesome/css/all.css": "893c10c3948e167765d15598b684621cc65829af",
     "./assets/fontawesome/css/all.min.css": "8b4236206a8b86af3761a244277663046d7ff7ee",
@@ -4343,23 +4345,23 @@
     "./assets/img/sair.jpg": "88ca75d00d0715c67b09effecffea553520faafe",
     "./assets/img/whats.jpg": "6363dfd47f9941c97a69446cc03b5cbacec7cef1",
     "./assets/img/yellowCicle.png": "7b8d340de1351f79ddb796c6dfed184765489aad",
-    "./color.dae87a04d07ca92b.png": "ff4c4bcb2207891b292f544edb4da9d2df5d45cf",
+    "./color.febf5f041e83bfbe.png": "c54e4eac0b6c88b9da8cfdf00b1d9093b828286b",
     "./favicon.ico": "68c387a546f25fef776b70a0803b1789fa9aab5a",
     "./fundo2.30d455916378ae46.jpg": "7c17954224543ac79aee683e03df01afb4be4774",
     "./fundox2.0dd5998841fe9425.jpg": "7e439026699cf2455f87d303627bd21269742153",
-    "./hue.8b1818380241e6ac.png": "f81ae627637a684614aa726e206c73ce099a01fd",
-    "./index.html": "b78722cc46a90333317fb61d27273bc6de211d79",
-    "./main.eef52b209658071a.js": "cc06caa3ae3f632f2933a1801e832a308b224407",
+    "./hue.de26927932756490.png": "ec215387067c733aed6649b96d8a81798a58b21b",
+    "./index.html": "8d9467028f9593bd3833bcbdff100f8589769e8f",
+    "./main.6b563b8e7db73abc.js": "1863a7dcbb61095ec256b19ee103d81e04693193",
     "./manifest.webmanifest": "e926810cd123aac9369812f88ad78e9b32f1ede1",
-    "./polyfills.495ca4a6f8947ca1.js": "2168223db0b5fe48baf82adba1b422814114aa1d",
+    "./polyfills.e39215639f96cbe7.js": "9efb11c0ed18f6b61dac321692a05b2f84dada46",
     "./primeicons.0112589c5695a9ed.ttf": "ceeb46d594fde5cc507cdf8b70e38e78fe47653c",
     "./primeicons.943ab24c43224d29.svg": "d3332a45242b8f6edbf3f3c7176a280e7edcd961",
     "./primeicons.ba3f916dfb64be8c.woff2": "55a4b2a5f02e362405d8d874903af0b5f6a6c15d",
     "./primeicons.f8b9e8a4e401b603.woff": "b1648b50be13350fde8b5d9a6fe78354ddcc43e4",
     "./primeicons.ffecb2549ad1765a.eot": "e4df2355c405cd38aada36eda9015a810feab94c",
-    "./runtime.72c9fa9ce45196bb.js": "d9d18175ea5b8c1882ade3bde1ddcc8ab18b413c",
-    "./scripts.cf89aba20fd7084e.js": "75bf9d79ada6001444708e37b1941829b4899985",
-    "./styles.4b7e499fa7cdfed0.css": "33f157faef02e0a80964c1a1524aea0b3b1a8f9d"
+    "./runtime.27b74956bbb8a4a2.js": "c959f2c6a115cdf796765f8af4e7f7a3e370f6e0",
+    "./scripts.a9665e37e3478df3.js": "a259ac9500efbb374a7aa52b4b3b24bf3925a3cc",
+    "./styles.74a0b0c4bab2574c.css": "c95a7937e8eb77db90e82897c75887268298ed44"
   },
   "navigationUrls": [
     {
