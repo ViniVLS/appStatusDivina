@@ -1,5 +1,5 @@
 import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/common';
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -41,57 +41,51 @@ export function tokenGetter() {
   return localStorage.getItem('access_token');
 }
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponent,
-    NavbarComponent,
-    PacienteStatusComponent,
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    CoreModule,
-    SegurancaModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    MultiSelectModule,
-    ToastModule,
-    DataViewModule,
-    TableModule,
-    ButtonModule,
-    InputTextModule,
-    AppRoutingModule,
-    PanelModule,
-    DialogModule,
-    CurrencyMaskModule, 
-    EditorModule,
-    SelectButtonModule,
-    TooltipModule,
-    CheckboxModule,
-    ProgressSpinnerModule,
-    CommonModule,
-    ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: environment.production,
-    }),
-    JwtModule.forRoot({
-      config: {
-        tokenGetter: tokenGetter,
-      },
-    }),
-  ],
-  providers: [
-    { provide: LocationStrategy, useClass: HashLocationStrategy },
-    { provide: HTTP_INTERCEPTORS, useClass: JwtHttpInterceptor, multi: true },
-    CepService,
-    AuthService,
-    JwtHelperService,
-    PasswdService,
-    LogoutService,
-    MessageService,
-  ],
-  bootstrap: [AppComponent],
-})
+@NgModule({ declarations: [
+        AppComponent,
+        LoginComponent,
+        NavbarComponent,
+        PacienteStatusComponent,
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        FormsModule,
+        CoreModule,
+        SegurancaModule,
+        BrowserAnimationsModule,
+        MultiSelectModule,
+        ToastModule,
+        DataViewModule,
+        TableModule,
+        ButtonModule,
+        InputTextModule,
+        AppRoutingModule,
+        PanelModule,
+        DialogModule,
+        CurrencyMaskModule,
+        EditorModule,
+        SelectButtonModule,
+        TooltipModule,
+        CheckboxModule,
+        ProgressSpinnerModule,
+        CommonModule,
+        ServiceWorkerModule.register('ngsw-worker.js', {
+            enabled: environment.production,
+        }),
+        JwtModule.forRoot({
+            config: {
+                tokenGetter: tokenGetter,
+            },
+        })], providers: [
+        { provide: LocationStrategy, useClass: HashLocationStrategy },
+        { provide: HTTP_INTERCEPTORS, useClass: JwtHttpInterceptor, multi: true },
+        CepService,
+        AuthService,
+        JwtHelperService,
+        PasswdService,
+        LogoutService,
+        MessageService,
+        provideHttpClient(withInterceptorsFromDi()),
+    ] })
 export class AppModule {
   VAPID_PUBLIC_KEY = 'BNmSUbe4i_ac86Z8BpXsgZbCIBPODKrAxaEFF4NzHVOg2yFbSzYZAsWibf9ckBXT_69VkOi2BvWNcQnjz7VzRzU';
 

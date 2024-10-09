@@ -11,7 +11,7 @@ import { FormsModule } from "@angular/forms";
 import { ButtonModule } from "primeng/button";
 import { InputTextModule } from "primeng/inputtext";
 import { PasswordModule } from "primeng/password";
-import { HttpClientModule } from "@angular/common/http";
+import {} from "@angular/common/http";
 import { config } from "rxjs";
 import { environment } from "../../environments/environment";
 

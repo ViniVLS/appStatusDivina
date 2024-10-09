@@ -103,7 +103,7 @@ export class PacienteStatusComponent implements OnInit {
         this.auth.limparAccessToken();   
         this.messageService.add({
           severity: 'info',
-          summary: 'Logout',
+          summary: '',
           detail: 'Saiu com sucesso!',
         });
         this.router.navigate(['/login']);
@@ -113,7 +113,7 @@ export class PacienteStatusComponent implements OnInit {
         //console.error('Erro no logout mas retorna ao login:', erro);
         this.messageService.add({
           severity: 'info',
-          summary: 'Logout',
+          summary: '',
           detail: 'Saiu com sucesso!',
         });
         this.router.navigate(['/login']);
