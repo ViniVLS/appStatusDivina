@@ -21,7 +21,7 @@ export class PacienteStatusService {
          //.get(`http://192.168.18.96:8080/pacpa/${teste}`)
         .toPromise()
         .then((dados) => {
-          //console.log("Dados: ", dados);
+          //console.log("Dados: ", dados, '----Teste: ', teste);
           return dados;
         })
         .catch((error) => {
@@ -29,8 +29,6 @@ export class PacienteStatusService {
           throw error;
         });
     };
-
-
 
     consultaLinha(atendimento: string): Promise<any> {
       //console.log("Retorno consulta de dados.atendimento para a constante => atendimento: ", atendimento);

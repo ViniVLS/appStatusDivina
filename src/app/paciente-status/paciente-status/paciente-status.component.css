@@ -74,18 +74,27 @@
   height: 30px;
 }
 
-.textoShare {
-  text-align: left;
-  font-size: 20px;
-  margin-left: 17em;
-  margin-right: 17em;
+.textoShare { 
+  font-size: 25px;
   margin-top: 1.5em;
-  font-family: Arial, Helvetica, sans-serif;  
+  margin-bottom: 1em;
+  font-family: Arial, Helvetica, sans-serif;   
+  justify-content: center; 
+  margin-left: 13em;
+  padding-left: 6em;
+  padding-right: 4em;
+  overflow-wrap: break-word;
+  white-space: normal;
+  height: auto;
+  width: 90%;
+  max-width: 70%; /* Limita o texto à largura do contêiner */
+
+  
 }
 
 .share {
   text-align: center;
-  font-size: 18px;
+  font-size: 27px;
   cursor: pointer;
   margin-top: 0.5em;
  }
@@ -108,7 +117,7 @@
   padding-right: 0.5em;
   padding-top: 0.5em;
   width: 90%;
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
   margin-top: 1.5em;
   background-color: rgb(235, 235, 235);
@@ -153,6 +162,7 @@
   overflow: hidden;
   position: relative;
   padding-bottom: 0.8em;
+  max-width: 1600px;
  }
 
 .titleStatus {
@@ -462,12 +472,15 @@ ul.timeline p.timeline-item-faded:not(:last-child)::after {
   }
 
   .textoShare {
-    text-align: left;
     font-size: 10px;
     margin-left: 5em;
     margin-right: 5em;
     margin-top: 1.5em;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;   
+    margin-bottom: 1em;  
+    width: 100%;
+    max-width: 100%; /* Limita o texto à largura do contêiner */
+    margin-left: 0em;
   }
 
   .share {
@@ -621,11 +634,11 @@ ul.timeline p.timeline-item-faded:not(:last-child)::after {
   .navbar h1 {
     font-size: 22px;
     display: flex;
-    padding-right: 0px;
+    padding-right: 20px;
     padding-left: 0px;
-    justify-content: left;
+    justify-content: center;
     width: 230px;
-    white-space: nowrap;
+    white-space: nowrap;     
   }
 
   .navbar .sair {
@@ -793,16 +806,19 @@ ul.timeline p.timeline-item-faded:not(:last-child)::after {
 
   .textoShare {
     text-align: left;
-    font-size: 13px;
-    margin-left: 4em;
-    margin-right: 4em;
+    font-size: 19px;
+    margin-left: 0em;
+    margin-right: 0em;
     margin-top: 1.5em;
     font-family: Arial, Helvetica, sans-serif;
+    width: 100%; 
+    margin-bottom: 1em;  
+    max-width: 100%; /* Limita o texto à largura do contêiner */
   }
 
   .share {
     text-align: center;
-    font-size: 14px;
+    font-size: 24px;
   }
 
   .formStatusPaciente {
@@ -827,11 +843,14 @@ ul.timeline p.timeline-item-faded:not(:last-child)::after {
 
   .textoShare {
     text-align: left;
-    font-size: 15.5px;
-    margin-left: 3.5em;
-    margin-right: 3.5em;
+    font-size: 20.5px;
+    margin-left: 0em;
+    margin-right: 0em;
     margin-top: 1.5em;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;  
+    width: 100%; 
+    margin-bottom: 1em;  
+    max-width: 100%; /* Limita o texto à largura do contêiner */
   }
 
   .share {
@@ -976,7 +995,6 @@ ul.timeline p.timeline-item-faded:not(:last-child)::after {
     z-index: 0;
   }
 
-
   /* Nova classe para o texto mais apagado */
   ul.timeline p.faded-item {
     width: 50px;
@@ -1006,9 +1024,6 @@ ul.timeline p.timeline-item-faded:not(:last-child)::after {
   }
 
   /*Final Da timeLine*/
-
-
-
 
   .horaAtual {
     font-size: 9px;
@@ -1095,16 +1110,24 @@ ul.timeline p.timeline-item-faded:not(:last-child)::after {
 @media (min-width: 1150px) and (max-width: 1500px) {
   .textoShare {
     text-align: left;
-    font-size: 20px;
-    margin-left: 4em;
-    margin-right: 4em;
+    font-size: 20px; 
     margin-top: 1.5em;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif; 
+    margin-left: 0em;
+    margin-right: 0em;   
+    width: 100%; 
+    margin-bottom: 1em;  
+    max-width: 100%; /* Limita o texto à largura do contêiner */  
   }
 
   .share {
     margin-top: 3px;
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
+  }
+
+  .satisfacao{
+    font-size: 30px;
+    margin-bottom: 2em;
   }
 }

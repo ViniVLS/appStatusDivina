@@ -33,7 +33,6 @@ export class LoginComponent implements OnInit {
       this.loginUrl()
     }
   }
-
   
     login(form?: NgForm) {
       this.codigo = form.value.codigo; 
@@ -52,7 +51,6 @@ export class LoginComponent implements OnInit {
         });
     }
 
-
     loginUrl() {    
       let codigoUrl = this.codigoUrl;    
       //console.log(codigoUrl);  
@@ -65,9 +63,7 @@ export class LoginComponent implements OnInit {
           this.messageService.add({ severity: "error", detail: erro });
         });
     }
-  
-
-  
+    
 
 }
 

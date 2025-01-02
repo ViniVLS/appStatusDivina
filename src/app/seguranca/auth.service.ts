@@ -14,10 +14,6 @@ export class AuthService {
 
   jwtPayload: any;
 
-
-  
-
-
   constructor(
     private http: HttpClient,
     private router: Router,
@@ -26,31 +22,32 @@ export class AuthService {
     this.carregarToken();
   }
 
-
-
   login(usuario: string, senha: string): Promise<void> {
     //console.log('Login - Usuário:', usuario, 'Senha:', senha);
     const headers = new HttpHeaders()
       .append("Content-Type", "application/x-www-form-urlencoded")
       .append("Authorization", "Basic cGFjcGE6QG5ndWxAcjBwYUMuMzA=");
+     // console.log("Headers: ", headers);
 
-    let body = `username=${usuario}&password=${senha}&grant_type=password`;
+    const body = `username=${usuario}&password=${senha}&grant_type=password`;
+   // console.log('Body: ',body);
 
     return this.http
       .post<any>(this.oauthTokenUrl, body, { headers, withCredentials: true })
       .toPromise()
       .then((response) => {
         this.armazenarToken(response.access_token);
+       // console.log("OauthTokenUrl: ", this.oauthTokenUrl);
       })
       .catch((response) => {
         if (response.status === 400) {
           if (response.error.error === "invalid_grant") {
-            return Promise.reject("Código inválido!");
-            
+            return Promise.reject("Código inválido!");            
           }
         }
-
+        console.log("", response);
         return Promise.reject(response);
+        
       });
   }
 
@@ -106,6 +103,8 @@ export class AuthService {
       });
   }
 
+
+  
   isAcessTokenInvalido() {
     const token = localStorage.getItem("token");
     if (this.router.url.indexOf("/appaplic") < 0) {
@@ -114,6 +113,7 @@ export class AuthService {
       return false;
     }
   }
+  
 
   solicitacaoSenha(cpf: string, email: string): Promise<any> {
     this.user = { cpf: cpf, senha: "10", email: email };

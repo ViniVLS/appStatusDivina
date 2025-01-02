@@ -18,6 +18,8 @@ import { AuthService } from "./../../seguranca/auth.service";
   styleUrls: ["./paciente-status.component.css"],
 })
 export class PacienteStatusComponent implements OnInit {
+  setor: string= "";
+
   dados: PacienteDados;
   linha: string[] = [];
 
@@ -31,7 +33,7 @@ export class PacienteStatusComponent implements OnInit {
   itensStatus: string[] = [];
 
   constructor(
-    private pacienteService: PacienteStatusService,
+    private pacienteStatusService: PacienteStatusService,
     private router: Router,
     private logoutService: LogoutService,
     private renderer: Renderer2,
@@ -58,14 +60,17 @@ export class PacienteStatusComponent implements OnInit {
   }
 
   consultaStatus(): void {
-    //console.log('Dados: ',this.dados);
-    this.pacienteService.consultaStatus().then((dados) => {
+    //console.log('Dados antes dos metodos: ',this.dados);
+    this.pacienteStatusService.consultaStatus().then((dados) => {
       if (dados) {
+        if(dados.setor){
+          this.setor = dados.setor;
+        } 
         this.dados = dados;
-        // console.log("Todos os dados: ",dados)
+       // console.log("Dados da ConsultaStatus: ",dados)
         this.classificacao = dados.classificacao; //Não retirar porque é das cores de classificação
         this.pacienteNome = this.dados.paciente; // Não retirar porque é para API Whatsapp
-        this.pacienteService.consultaLinha(dados.atendimento).then((linha) => {
+        this.pacienteStatusService.consultaLinha(dados.atendimento).then((linha) => {
           if (linha) {
             this.linha = linha;
             //console.log('Timeline: ',linha);
@@ -120,8 +125,7 @@ export class PacienteStatusComponent implements OnInit {
       }
     );
   }
-  
-  
+    
 
   compartilharViaWhatsApp() {
     const codigo = this.codigo;
