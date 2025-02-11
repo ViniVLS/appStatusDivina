@@ -35,6 +35,9 @@ import { LogoutService } from './seguranca/logout.service';
 import { PasswdService } from './seguranca/passwd.service';
 import { SegurancaModule } from './seguranca/seguranca.module';
 import { JwtModule } from '@auth0/angular-jwt';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
 
 
 export function tokenGetter() {
@@ -68,6 +71,8 @@ export function tokenGetter() {
         CheckboxModule,
         ProgressSpinnerModule,
         CommonModule,
+        ReactiveFormsModule,
+    
         ServiceWorkerModule.register('ngsw-worker.js', {
             enabled: environment.production,
         }),

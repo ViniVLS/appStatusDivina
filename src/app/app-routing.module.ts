@@ -7,6 +7,7 @@ import { PacienteStatusComponent } from "./paciente-status/paciente-status/pacie
 
 import { AuthGuard } from "./seguranca/auth.guard";
 import { PasswdComponent } from "./seguranca/passwd/passwd.component";
+import { PacienteSharedComponent } from "./paciente-shared/paciente-shared.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "login", pathMatch: "full" },
@@ -21,8 +22,7 @@ const routes: Routes = [
     path: "login/:codigoUrl", 
     component: LoginComponent,
     canActivate: [AuthGuard],
-    data: { roles: ["ROLE_GERAL"] },
-   
+    data: { roles: ["ROLE_GERAL"] },   
     
   }, 
 
@@ -38,6 +38,17 @@ const routes: Routes = [
     component: PacienteStatusComponent,
     canActivate: [AuthGuard],
     data: { roles: ["ROLE_PACIENTE"] },
+  },
+
+  { path: "pacienteshared",
+    component: PacienteSharedComponent,
+    canActivate: [AuthGuard],    
+  },
+
+  { path: "pacienteshared/:codigo",
+    component: PacienteSharedComponent,
+    canActivate: [AuthGuard], 
+    data: { roles: ["ROLE_PACIENTE"] },   
   },
 
   { path: "**", redirectTo: "login" },

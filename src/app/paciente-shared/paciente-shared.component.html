@@ -1,0 +1,93 @@
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  </head>
+  <nav class="navbar">
+    <img src="assets/img/logoNovoDivinaSemFundoBranca.jpg" alt="Logo" height="80px" />
+    <h1>Trajeto do Paciente</h1>
+    <img (click)="sair()" class="sair" src="assets/img/sair.jpg" pTooltip="Sair" tooltipPosition="top" />
+  </nav>
+  
+  
+  <p class="pacEsp">
+    <img src="assets/img/persons.jpg" />
+    <strong>Para consulta médica:</strong>
+    <span>{{ dados?.cor }}</span>
+  </p>
+  <br>
+ 
+  
+  
+  <form class="formInfoPaciente">
+    <h1>Emergência<!--{{setor}}--></h1>
+    <div class="horaAtual">
+      <span>Atualizado em: {{ dados?.atualizado }}</span>
+    </div>
+  
+    <p>
+       <span>Nome: </span><strong class="dado">{{ dados?.paciente}}</strong>
+       <!--<span>Nome: </span><strong class="dado">Paciente Teste </strong>-->
+    </p>
+    <p>
+      <span>Atendimento: </span><strong class="dado">{{ dados?.atendimento }}</strong>
+    </p>
+    <p>
+      <span>Data/Hora da entrada: </span><strong class="dado">{{ dados?.dtentrada }}</strong>
+    </p>
+  
+    <p>
+      <span>Classificação de Risco: </span>
+      <strong class="dado" [ngClass]="dados?.classificacao.toLowerCase()">{{ dados?.classificacao }}
+        <ng-container [ngSwitch]="dados?.classificacao">
+          <span *ngSwitchCase="'Amarelo'">(Urgência)</span>
+          <span *ngSwitchCase="'Laranja'">(Muito Urgente)</span>
+          <span *ngSwitchCase="'Vermelho'">(Emergência)</span>
+          <span *ngSwitchCase="'Azul'">(Não Urgente)</span>
+          <span *ngSwitchCase="'Verde '">(Pouco Urgente)</span>
+          <span *ngSwitchDefault>Sem dado</span>
+        </ng-container>
+      </strong>
+    </p>
+  </form>
+  
+  <div class="imgClassif2">
+    <img src="assets/img/redCicle.png" alt="Vermelho" />
+    <h1>Emergência |</h1>
+    <img src="assets/img/orangeCicle.png" alt="Laranja" />
+    <h1>Muito Urgente |</h1>
+    <img src="assets/img/yellowCicle.png" alt="Amarelo" />
+    <h1>Urgência |</h1>
+    <img src="assets/img/greenCicle.png" alt="Verde" />
+    <h1>Pouco Urgente |</h1>
+    <img src="assets/img/blueCicle.png" alt="Azul" />
+    <h1>Não Urgente</h1>
+  </div>
+  
+  <form class="formStatusPaciente">
+    <span class="titleStatus">Trajeto do paciente...</span>
+    <!-- <p class="dadosStatus">{{ dados?.status }}</p> *Produção Antiga-->
+  
+    <div class="timeline-container"> <!--*Produção-->
+      <ul class="timeline">
+        <p *ngFor="let item of linha">
+          <span>{{ item?.status }} </span>
+          <!--<span><b>{{ item?.dt_atualizacao }}</b></span> -->
+        </p>
+      </ul>
+    </div>
+  
+  </form>
+  <div class="satisfacao">
+    <a href="https://forms.gle/XFcj33LmMeboTHqg9" target="_blank">
+      <strong>
+        “ Sua opinião é muito importante para nós, toque aqui e deixe sua
+        opinião ”
+      </strong>
+    </a>
+  </div>
+  
+  <div class="footer">
+    <p>
+      &copy; 2023 RSDP - Rede De Saúde Da Divina Providência *Trajeto do
+      Paciente
+    </p>
+  </div>

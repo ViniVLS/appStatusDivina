@@ -1,11 +1,13 @@
 import { Injectable } from "@angular/core";
 import { AuthService } from "./../seguranca/auth.service";
 import { HdpHttp } from "./../seguranca/hdp-http";
+import { Observable } from "rxjs";
 
 @Injectable({
   providedIn: "root",
 })
 export class PacienteStatusService {
+  getFiles: any;
 
   constructor(private http: HdpHttp, private auth: AuthService) { }
 
@@ -66,6 +68,42 @@ export class PacienteStatusService {
       });
   };
 
+
+
+
+
+
+  consultarExamesIm(codigoLancamento: string): Promise<any> {
+    return this.http
+      .get(
+        "https://app.divinaprovidencia.org.br/hdp-api/exames/0/" +
+          codigoLancamento
+      )
+      .toPromise();
+  }
+
+  consultarExamesLb(codigoLancamento: string): Promise<any> {
+    return this.http
+      .get(
+        "https://app.divinaprovidencia.org.br/hdp-api/exames/1/" +
+          codigoLancamento
+      )
+      .toPromise();
+  }
+
+  consultarLaudo(laudo: string): Observable<Blob> {
+    return this.http.get(
+      "https://app.divinaprovidencia.org.br/hdp-api/laudo/" + laudo,
+      { responseType: "blob" }
+    );
+  }
+
+  consultarLaudoLB(laudo: string): Observable<Blob> {
+    return this.http.get(
+      "https://app.divinaprovidencia.org.br/hdp-api/laudo/1/" + laudo,
+      { responseType: "blob" }
+    );
+  }
   
 
 }
